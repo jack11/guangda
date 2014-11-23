@@ -5,7 +5,7 @@
 .cbody_title a{height:30px;line-height:30px;text-decoration: none;display: block;float: right;padding: 0 5px;margin: 3px;}
 .cbody_title input{height: 22px;width: 200px;margin-right:3px;margin-top:9px;border: 1px solid #DBDBDB; }
 .cbody_title a span{width: 25px;height: 25px;display: block;float: left;margin-top: 3px;margin-right:2px; }
-.cbody_title a:hover{background-color: #F0F0F0;border: 1px solid #E5E3E3;}
+.cbody_title a:hover{background-color: #F0F0F0;border: 1px solid #E5E3E3;cursor:pointer;}
 .add_icon{background:url(../images/admin_icon.png) -14px -55px;}
 .delete_icon{background:url(../images/admin_icon.png) -46px -55px;}
 .update_icon{background:url(../images/admin_icon.png) -109px -55px;}
@@ -20,6 +20,16 @@
 .cbody_content td a{width: 25px;height: 25px;display: block;float: left;margin-right:8px;}
 .cbody_content td a:hover{top:1px;left: 1px;position: relative;}
 .title_width{width: 280px;}
+
+.op_content table{margin:10px 0 0 50px;font-size:16px;color:black;}
+.op_content tr{height:38px;margin-top:20px;}
+.op_content input,.op_content select,.op_content textarea{border: 1px solid #DBDBDB;font-family: 'Microsoft Yahei';font-size:14px;}
+#ptime{color:#8a8a8a;}
+.if_title input{width:600px;height:18px;padding:3px;border:1px solid #ADADAD;}
+.if_content textarea{width:600px;height:180px;}
+.if_operate{text-align:right;}
+.if_operate input{height:32px;width:70px;background-color:#DDDDDD;color:#787878;border:1px solid #BBBBBB;}
+.if_operate input:hover{background-color:#CECECE;cursor:pointer;}
 
 .cbody .error {background:#ffdede url(../images/sprite.png) no-repeat 17px -712px;color:#be0000;}
 .cbody .warning {color:#dc6200;background:#fff6de url(../images/sprite.png) no-repeat 18px -975px;}

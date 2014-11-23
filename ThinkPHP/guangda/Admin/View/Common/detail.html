@@ -1,15 +1,5 @@
-<link rel="stylesheet" type="text/css" href="_CSS_/iframe_common.css" />
-<script type="text/javascript" src="_JS_/jquery.js"></script>
 <style type="text/css">
-	.cbody_content table{margin:10px 0 0 40px;font-size:16px;color:black;}
-	.cbody_content tr{height:38px;margin-top:15px;}
-	input,select,textarea{border: 1px solid #DBDBDB;}
-	#ptime{color:#8a8a8a;}
-	.if_title input{width:600px;height:18px;padding:3px;}
-	.if_content textarea{width:600px;height:180px;}
-	.if_operate{text-align:right;}
-	.if_operate input{height:32px;width:70px;background-color:#DDDDDD;color:#787878;border:1px solid #BBBBBB;}
-	.if_operate input:hover{background-color:#CECECE;cursor:pointer;}
+
 </style>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -39,10 +29,10 @@
             setTimeout("showtime()", 1000);
         }
 </script>
-<div class="cbody_content">
+<div class="op_content">
 	<form>
 		<table>
-			<tr><td>标题：</td><td>{$item}</td></tr>
+			<tr><td>操作条目：</td><td>{$item}</td></tr>
 			<tr><td>标题：</td><td class="if_title"><input type="text" value="{$title}"></td></tr>
 			<tr><td>当前时间：</td>
 				<td><label id="ptime"></label>

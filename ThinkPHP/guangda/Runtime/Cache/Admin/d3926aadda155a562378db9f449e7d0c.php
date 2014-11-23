@@ -7,8 +7,8 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <meta charset=utf-8>
-  <link rel="stylesheet" href="/pro/guangda/ThinkPHP/Public/Admin/Css/login.css" type="text/css" />
-  <script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
+  <link rel="stylesheet" href="/guangda/ThinkPHP/Public/Admin/Css/login.css" type="text/css" />
+  <script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
   <script>
   	$(document).ready(function(){
 	  $("input[name='sub']").click(function(){

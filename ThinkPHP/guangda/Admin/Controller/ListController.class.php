@@ -33,7 +33,7 @@ class ListController extends BaseController {
 	public function sline(){
 		$slid = $this->getString("id");
 		$temp = '';
-		switch ($i) {
+		switch ($slid) {
 			case '1':
 				$temp = '对公条线';
 				break;
@@ -56,7 +56,7 @@ class ListController extends BaseController {
 	public function depart(){
 		$slid = $this->getString("id");
 		$temp = '';
-		switch ($i) {
+		switch ($slid) {
 			case '1':
 				$temp = '公司业务部';
 				break;
@@ -93,6 +93,7 @@ class ListController extends BaseController {
 	 * */
 	public function add(){
 		$type = $this->getString("type");
+		$this->assign('op',0);
 		$this->assign('item',$type);
         $this->display('Common/detail');
     }
@@ -111,5 +112,11 @@ class ListController extends BaseController {
 		$type = $this->getString("type");
 		$this->assign('item',$type);
         $this->display('Common/detail');
+    }
+	
+	public function search(){
+		$kw = $this->getString("search_word");
+		$this->assign('kw',$kw);
+        $this->display('Common/list');
     }
 }

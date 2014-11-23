@@ -1,7 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/iframe_common.css">
-<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/cbody.css">
-<script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
-<script type="text/javascript">
+<?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript">
 	$(document).ready(function(){
 		$(".cbody_content tr:odd").css({background: "#ffffff"}); // 1, 3 行
 		//$(".cbody_content tr:even").css({background: "#ffffff"}); // 2, 4 行
@@ -9,10 +6,14 @@
 </script>
 <div class="cbody_title">
 	<ul>
-		<li><a href="<?php echo U("List/add?type=$temp");?>"><span class="add_icon"></span>添加</a></li>
-		<li><a href="<?php echo U("List/update?type=$temp");?>"><span class="update_icon"></span>修改</a></li>
-		<li><a href="<?php echo U("List/delete?type=$temp");?>"><span class="delete_icon"></span>删除</a></li>
-		<li><form><input type="text"><a href="<?php echo U("List/search?type=$temp");?>"><span class="search_icon"></span>查询</a></form></li>
+		<li><a ourl="<?php echo U("List/add?type=$temp");?>"><span class="add_icon"></span>添加</a></li>
+		<li><a ourl="<?php echo U("List/update?type=$temp");?>"><span class="update_icon"></span>修改</a></li>
+		<li><a ourl="<?php echo U("List/delete?type=$temp");?>" tag="del"><span class="delete_icon"></span>删除</a></li>
+		<li><input id="skw" value="<?php echo ($kw); ?>" type="text">
+			<a ourl="<?php echo U("List/search");?>" tag="search_tag"><span class="search_icon"></span>查询</a>
+			</form>
+		</li>
+		<li><?php echo ($temp); echo ($kw); ?></li>
 	</ul>
 </div>
 <div class="cbody_content">
@@ -118,3 +119,31 @@
     	</div> -->
     </div>
 </div>
+<script type="text/javascript">
+	$(".cbody_title a").click(function(){
+		var tag = $(this).attr("tag");
+		var ourl = $(this).attr("ourl");
+		if(tag == "del"){
+			if(confirm("确定要删除该记录吗？")){
+				postAjax(ourl);
+			}
+		}else if(tag == "search_tag"){
+			postAjax(ourl,$("#skw").val());
+		}else{
+			postAjax(ourl);
+		}
+		
+		
+	});
+	
+	function postAjax(url,kw){
+		$.ajax(
+			{ url: url,
+			  data: "search_word="+kw,
+			  success: function(r){
+				$(".cbody").html(r);
+			  }
+			}
+		);
+	}
+</script>

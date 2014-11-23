@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript">
 	$(document).ready(function(){
 		$(".cbody_content tr:odd").css({background: "#ffffff"}); // 1, 3 行
 		//$(".cbody_content tr:even").css({background: "#ffffff"}); // 2, 4 行
@@ -6,14 +6,14 @@
 </script>
 <div class="cbody_title">
 	<ul>
-		<li><a ourl="{:U("List/add?type=$temp")}"><span class="add_icon"></span>添加</a></li>
-		<li><a ourl="{:U("List/update?type=$temp")}"><span class="update_icon"></span>修改</a></li>
-		<li><a ourl="{:U("List/delete?type=$temp")}" tag="del"><span class="delete_icon"></span>删除</a></li>
-		<li><input id="skw" value="{$kw}" type="text">
-			<a ourl="{:U("List/search")}" tag="search_tag"><span class="search_icon"></span>查询</a>
+		<li><a ourl="<?php echo U("Download/add?type=$temp");?>"><span class="add_icon"></span>添加</a></li>
+		<li><a ourl="<?php echo U("Download/update?type=$temp");?>"><span class="update_icon"></span>修改</a></li>
+		<li><a ourl="<?php echo U("Download/delete?type=$temp");?>" tag="del"><span class="delete_icon"></span>删除</a></li>
+		<li><input id="skw" value="<?php echo ($kw); ?>" type="text">
+			<a ourl="<?php echo U("Download/search");?>" tag="search_tag"><span class="search_icon"></span>查询</a>
 			</form>
 		</li>
-		<li>{$temp}{$kw}</li>
+		<li><?php echo ($temp); echo ($kw); ?></li>
 	</ul>
 </div>
 <div class="cbody_content">
@@ -23,7 +23,7 @@
 			<th>ID</th>
 			<th class="title_width">标题</th>
 			<th>发布时间</th>
-			<th>阅读人数</th>
+			<th>下载人数</th>
 			<th>操作</th>
 		</thead>
 		<tr><td><input type="checkbox"></td><td>1</td><td>呵呵呵</td><td>2012-12-12</td><td>2222</td>
@@ -146,4 +146,4 @@
 			}
 		);
 	}
-</script>		
+</script>

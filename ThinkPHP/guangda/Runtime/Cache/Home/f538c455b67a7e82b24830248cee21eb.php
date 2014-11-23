@@ -6,10 +6,10 @@
 	<meta name="author" />
 	<meta name="keyword" />
 	<meta name="description" />
-	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Home/css/common.css">
-	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Home/css/down_list.css">
-	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Home/js/jquery.js"></script>
-	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Home/js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Home/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Home/css/down_list.css">
+	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Home/js/jquery.js"></script>
+	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Home/js/index.js"></script>
 	
 </head>
 <body>
@@ -17,7 +17,7 @@
 	<div id="banner"></div>
 	<div id="nav">
 		<ul class="nav_bar">
-			<li ><a class="<?php echo ($first_title[0]['class']); ?>" href="/pro/guangda/ThinkPHP">首页</a></li>
+			<li ><a class="<?php echo ($first_title[0]['class']); ?>" href="/guangda/ThinkPHP">首页</a></li>
 			<li ><a href="<?php echo U('Message/index?c=3');?>" class="<?php echo ($first_title[1]['class']); ?>">行内通知 </a>
 				<ul class="li_bar">
 					<li ><a href="<?php echo U('Message/index?c=23');?>">综合信息</a></li>
@@ -75,7 +75,7 @@
 	    	</div>
         	<div class="right_content">
         		<?php if(($error) == ""): ?><ul>
-	        	<?php if(is_array($list)): foreach($list as $key=>$v): ?><li><img src="/pro/guangda/ThinkPHP/Public/upload/images/<?php echo ($v["icon"]); ?>">
+	        	<?php if(is_array($list)): foreach($list as $key=>$v): ?><li><img src="/guangda/ThinkPHP/Public/upload/images/<?php echo ($v["icon"]); ?>">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="<?php echo U("DownLoad/detail?c=$v[category_id]&id=$v[id]");?>"><?php echo ($v["file"]); ?></a></div>
@@ -88,7 +88,7 @@
 	            			</div>
 	            		</div>
 	            	</li><?php endforeach; endif; ?>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -101,7 +101,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -114,7 +114,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -127,7 +127,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -140,7 +140,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -153,7 +153,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -166,7 +166,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -179,7 +179,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -192,7 +192,7 @@
 	            			</div>
 	            		</div>
 	            	</li>
-	            	<li><img src="/pro/guangda/ThinkPHP/Public/Home/images/docx_win.png">
+	            	<li><img src="/guangda/ThinkPHP/Public/Home/images/docx_win.png">
 	            		<div class="data_msg">
 	            			<div class="data_content">
 	            				<div class="data_name"><a href="down_msg.html">青岛未出口鱼片黑名单企业向美</a></div>
@@ -229,12 +229,12 @@
       	<li><a href="http://10.5.88.7" target="_blank">广州分行</a>|</li>
       	<li><a href="http://www.cebbank.com" target="_blank">总行</a>|</li>
       	<li><a target="_blank">IAM系统</a>|</li>
-      	<li><a href="/pro/guangda/ThinkPHP/Admin/" target="_blank">管理员</a>|</li>
+      	<li><a href="/guangda/ThinkPHP/Admin/" target="_blank">管理员</a>|</li>
 	</ul></div>
 	<div class="copyright">中国光大银行湛江分行版权所有</div>
 	<div class="copyright">地址：广东省湛江市赤坎区人民大道北45号丽晶大厦</div>
 	<div class="auth_logo">
-		<img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行">
+		<img src="/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行">
 	</div>
 </div>
 
