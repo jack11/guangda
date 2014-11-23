@@ -59,4 +59,16 @@ class CategoryModel extends MyModel{
 		  }
 		return array_reverse($nav);
 	  }
+	  
+	  /**
+	   * 根据id得到名字
+	   * @param array ids
+	   * @return mixed array or false
+	   */
+	 public function getNameByIds($ids){
+		$ids = array_unique($ids);
+		$where['id'] = array('in',$ids);
+		$fields = array('name','id');
+		return $this->where($where)->field($fields)->select();
+	 }
 }

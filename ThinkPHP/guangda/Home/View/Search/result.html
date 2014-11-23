@@ -1,36 +1,211 @@
 <!doctype html>
 <html>
-<head>
-	<title>具体内容</title>
-	<meta charset="utf-8" />
-	<meta name="author" />
-	<meta name="keyword" />
-	<meta name="description" />
-	<link rel="stylesheet" type="text/css" href="_CSS_/common.css">
-	<style>
-		
-	</style>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<head>
+		<title>具体内容</title>
+		<meta charset="utf-8" />
+		<meta name="author" />
+		<meta name="keyword" />
+		<meta name="description" />
+		<link rel="stylesheet" type="text/css" href="_CSS_/common.css">
+		<!-- <link rel="stylesheet" type="text/css" href="_CSS_/style.css"> -->
+
+		<script type="text/javascript" src="_JS_/jquery.js"></script>
+		<script type="text/javascript" src="_JS_/index.js"></script>
+
+		<style>
+			#content{min-height:300px;height:0;}
+			#left{width:170px;float:left;}
+			.tabs{margin-top:20px;}
+			.tabs li {margin-bottom: 10px;padding-left: 8px;color: #999;}
+			.tabs .current {color: #333;font-weight:bold;}
+			
+			#center{width:600px;float:left;padding-left:10px;border-left:1px #CCCCCC solid;}
+			.search {margin:auto;width:350px;}
+			.search_bar{float: left;line-height:33px;font-size:15px;font-weight:bold;padding-top:5px;}
+			.search form{width: 300px;height: 33px;margin-top: 3px;border: 1px solid #dadada;line-height: 30px;float: left;}
+			.search input[type=text]{height:33px;}
+			.submit{background: url(_IMG_/search_bg.png);width: 28px;height: 28px;border: none;}
+			.keyword,.key{width:252px;height:33px;border: none;line-height:33px;}
+			.hot_word{padding-left:50px;}
+			.hot_word span{margin-left:5px;color:#369}
+			
+			.count{margin-top:10px; color:#666;}
+			.res_cate{color:#679DF7;}
+			.res_title,.res_cate{font: 17px/1.5 Tahoma,Helvetica,'SimSun',sans-serif;}
+			.res_time{color:#666;}
+			.result li{margin-top:10px;}
+			
+			#right{width:80px;float:right;padding:80px 30px;}
+			#right li{margin-top:5px;width:100px;overflow: hidden;}
+			.right_title{font-weight: bold;}
+			
+			#pager{margin-top:0px;height:34px;border: 1px solid #EEEEEE;float: right;background-color: #F5F5F5;}
+			#pager .all_page{height:34px;line-height:34px;padding:0 12px;float:left;border: 1px solid #EEEEEE;}
+			#pager .to_page{height:34px;line-height:34px;float:right;}
+			#pager .to_page input{width:51px;height:33px;line-height:34px;border: 1px solid #EEEEEE;}
+			#pager .to_page a{float: right;}
+			#pager ul{float: left;}
+			#pager ul li{float: left;border: 1px solid #EEEEEE;}
+			#pager a{height: 34px;line-height:34px;padding:0 12px;display: block;color: black;}
+			#pager a:hover{background-color: white;color: #9768AC;}
+			#pager ul li .active{background-color: white;color: #9768AC;}
+		</style>
+		<script>
+			$("#left").ready(function(){
+				
+			})
+		</script>
+	</head>
+	<body>
+		<include file="Common/header" />
+		<div id="content">
+			<div id="left">
+				<ul class="tabs">
+					<input type="hidden" value="{$data.time}"id="time_hidden">
+					<li class="current">
+						<em>› </em>全部时间
+					</li>
+					<li>
+						<em style="color: #fff;">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;searchLevel=3&amp;qs=txt.time.a&amp;timeLength=1&amp;orderField=default&amp;timeType=inside&amp;isAdv=1">24小时内</a>
+					</li>
+					<li>
+						<em style="color: #fff;">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;searchLevel=3&amp;qs=txt.time.a&amp;timeLength=7&amp;orderField=default&amp;timeType=inside&amp;isAdv=1">1周内</a>
+					</li>
+					<li>
+						<em style="color: #fff;">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;searchLevel=3&amp;qs=txt.time.a&amp;timeLength=30&amp;orderField=default&amp;timeType=inside&amp;isAdv=1">1月内</a>
+					</li>
+					<li>
+						<em style="color: #fff;">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;searchLevel=3&amp;qs=txt.time.a&amp;timeLength=365&amp;orderField=default&amp;timeType=inside&amp;isAdv=1">1年内</a>
+					</li>
+				</ul>
+				<ul class="tabs">
+					<input type="hidden" value="{$data.type}"id="type_hidden">
+					<li class="current">
+						<em>› </em>标题和全文
+					</li>
+					<li>
+						<em style="color: #fff">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;orderField=default&amp;searchLevel=4&amp;isAdv=1&amp;qs=txt.form.subject">全文</a>
+					</li>
+					<li>
+						<em style="color: #fff">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;orderField=default&amp;searchLevel=4&amp;isAdv=1&amp;qs=txt.form.subject">标题</a>
+					</li>
+				</ul>
+				<ul class="tabs">
+					<input type="hidden" value="{$data.order}"id="order_hidden">
+					<li class="current">
+						<em>› </em>按相关度排序
+					</li>
+					<li>
+						<em style="color: #fff;">› </em><a href="/f/search?q=mysql%E5%BE%97qwe&amp;sId=10969241&amp;ts=1416739037&amp;mySign=26ea9f50&amp;menu=1&amp;rfh=1&amp;searchLevel=3&amp;qs=txt.tsort.a&amp;orderField=posted&amp;orderType=desc">按时间排序</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="center">
+				<div class="search">
+					<div class="search_bar">搜索：</div>
+					<form action="{:U("search/result")}"> 
+						<input name="keyword" type="text" class="keyword key" value="{$data.keyword}"/>
+						<input type="submit" value=" " class="submit"/>
+					</form>
+					<div class="barrier"></div>
+					<p class="hot_word">
+						<a href="#"><span>银行</span></a>
+						<a href="#"><span>我们</span></a>
+						<a href="#"><span>信用卡</span></a>
+						<a href="#"><span>汇报</span></a>
+						<a href="#"><span>我们</span></a>
+						<a href="#"><span>信用卡</span></a>
+						<a href="#"><span>汇报</span></p></a>
+				</div>
+				<div class="result">
+					<if condition="$list">
+					<p class="count">总搜索到{$data.count}结果</p>
+					
+					<ul>
+						<foreach name="list" item="v">
+							<li><a href="{:U("message/index?c=$v[category_id]")}" class="res_cate">[{$v.category_name}]</a> 
+								<a href="{:U("Message/content?c=$v[category_id]&id=$v[id]")}" class="res_title">{$v.title}</a>
+								<br><p class="res_content">{$v.content}</p>
+								<p class="res_time">{$v.uptime|date="Y-m-d",###} - {$v.category_name}</p>
+							</li>
+						</foreach>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						<li><a href="" class="res_cate">[对公条线]</a> 
+							<a href="#" class="res_title">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE</a>
+							<br><p class="res_content">最近花了10多天重新写了泡菜博客,采用了PHP5+SQLITE技术。原因是MYSQL管理非常麻烦,而且还得花钱另外买数据库。sqlite 是一款轻量级的、基于文件的嵌入式数据库,...</p>
+							<p class="res_time">2012-07-01 18:34:04 - 综合消息</p>
+						</li>
+						
+					</ul>
+				</div>
+				<div id="pager">
+					{$pageCode}
+				</div>
+				<else />
+					抱歉，没有找到与{$keyword} 相关的文章。
+				</if>
+			</div>
+			
+			<div id="right">
+				<ul>
+					<li class="right_title">搜索历史</li>
+					<li><a href="#">php</a></li>
+					<li><a href="#">mysql</a></li>
+					<li><a href="#">光大银行</a></li>
+					<li><a href="#">哈哈</a></li>
+					<li><a href="#">serversql</a></li>
+				</ul>
+			</div>
+
+			<!-- <if condition="$list">
+			<ul>
+			<foreach name="list" item="v">
+			<li>[<a href="">{$v.category_name}</a>]<a href="#">{$v.title}</a><br>{$v.content}<br />{$v.uptime|date="Y-m-d",###}</li>
+			</foreach>
+			{$pageCode}
+			</ul>
+			<else />
+			没有搜索到结果
+			</if> -->
+		</div>
+
+		<div class="barrier"></div>
+		<include file="Common/footer" />
 	
-</head>
-<body>
-	<include file="Common/header" />
-	<div id="content">
-		<if condition="$list">
-		<ul>
-		<foreach name="list" item="v">
-			<li><a href="{:U("Message/content?c=$v[category_id]&id=$v[id]")}">{$v.title}</a><br>{$v.content}<br />{$v.uptime|date="Y-m-d",###}</li>
-		</foreach>
-		{$pageCode}
-		</ul>
-		<else />
-		没有搜索到结果
-		</if>
-	</div>
-
-	<div class="barrier"> </div>
-	<include file="Common/footer" />
-
-</body>
+	</body>
 
