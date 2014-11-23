@@ -1,0 +1,30 @@
+#content{min-height:300px;height:0;}
+
+#left{width:245px;float: left;}
+.list_header{height:32px;line-height:28px;color: #ffffff;font-size: 14px;font-family: 'Microsoft Yahei';text-align: center;line-height: 28px;background-image: url(../images/bg_title.png);}
+.msg_list{border-left:5px solid #EEEEEE;border-bottom:3px solid #EEEEEE;border-right:3px solid #EEEEEE;}
+.msg_list li {margin-top:2px;padding-left: 26px;line-height:32px;color: #605858;height: 32px;font-weight:800;display: block;overflow: hidden;background: #f7f7f7;border-bottom:1px solid #EEEEEE;}
+.msg_list li:hover{background-color: white;color: #9768AC;}
+.msg_list a{width:170px; color: #333;display: block;float: left;overflow: hidden;}
+.msg_list a:hover{color: #9768AC;}
+.msg_list span{float: right;width: 64px;}
+.msg_list .curr_title{background-color: white;/*border-top: 1px solid #EEEEEE;*/}
+.msg_list .curr_title a{color: #9768AC;}
+
+#right{width:735px;background: #F7F7F7;float: right;}
+.right_title {width: 720px;height: 32px;background-color:#CFCFCF;line-height: 32px;color: #000;font-size: 12px;padding-left: 15px;}
+.right_content {width: 727px;background: #fff;border-left: 5px solid #EEEEEE;border-bottom: 5px solid #EEEEEE;border-right: 3px solid #EEEEEE;}
+.right_content ul li {height:28px;line-height:28px;overflow:hidden;background: url(../Images/news_li.jpg) 17px center no-repeat;padding-left: 30px;border-bottom: 1px solid #cacaca;}
+.right_content ul li a{width:580px;height:28px;line-height:28px;display:block;color: #555;}
+.right_content ul li:hover,.right_content ul li>a:hover{background-color: #F5F5F5;color: #9768AC;}
+/*.right_content ul li a:hover{color: #9768AC;}*/
+.right_content span {float: right;padding-right: 22px;}
+
+.breadcrumbs li{float:left;height:32px;line-height: 32px;}
+.breadcrumbs li span{margin-left:5px;float:left;}
+.breadcrumbs a{color:#696969;font-family:'Microsoft Yahei';font-size:14px;font-weight:bold;margin-left:5px;float:left;}
+.breadcrumbs a:hover{color:#9768AC;text-decoration:none;}
+
+.msg_title{height:50px;line-height:50px;margin-top:10px;padding-top:20px;text-align: center;font-size:16px;}
+.post_time{width:120px;height:30px;line-height:30px;float: right;padding-right: 20px;}
+.msg_content{clear: both;padding-top:10px;text-indent: 2em;line-height: 24px;padding: 0 20px;font-family:'Microsoft Yahei';font-size:14px;}

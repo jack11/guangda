@@ -1,0 +1,41 @@
+<div id="header">
+	<div id="banner"></div>
+	<div id="nav">
+		<ul class="nav_bar">
+			<li ><a class="{$first_title[0]['class']}" href="__APP__">首页</a></li>
+			<li ><a href="{:U('Message/index?c=3')}" class="{$first_title[1]['class']}">行内通知 </a>
+				<ul class="li_bar">
+					<li ><a href="{:U('Message/index?c=23')}">综合信息</a></li>
+		        	<li ><a href="{:U('Message/index?c=24')}">重要通知</a></li>
+				</ul>
+			</li>
+			<li><a href="{:U('Message/index?c=4')}" class="{$first_title[2]['class']}">分行信息 </a>
+				<ul class="li_bar">
+					<li ><a href="{:U('Message/index?c=25')}">分行简报</a></li>
+		        	<li ><a href="{:U('Message/index?c=26')}">分行发文</a></li>
+				</ul>
+			</li>
+	        <li><a href="{:U('DownLoad/index?c=5')}" class="{$first_title[3]['class']}">下载专区 </a>
+	            <ul class="li_bar">
+	              <li><a href="{:U('DownLoad/index?c=27')}">资料下载</a></li>
+	              <li><a href="{:U('DownLoad/index?c=28')}">软件下载</a></li>
+	            </ul>
+	        </li>
+	        <li ><a href="{:U('Communication/index?c=6')}" class="{$first_title[4]['class']}">通讯录</a></li>
+	        <li ><a href="{:U('Cultural/index?c=7')}" class="{$first_title[5]['class']}">文化风采</a></li>
+	        <li ><a href="{:U('File/index?c=8')}" class="{$first_title[6]['class']}">公共文件夹</a></li>
+		</ul>
+	</div>
+	<script>
+		$('.nav_bar li').mouseenter(function(){
+			$(this).children('ul').stop(true).slideDown('fast');
+		}).mouseleave(function(){
+			$(this).children('ul').stop(true).slideUp('fast');
+		});
+	</script>
+	<div id="search_bar">
+		<form id="search_form" action="{:U("search/result")}" method="post">
+			<input type="text" name="keyword" class="keyword" value="全文检索" /><input type="submit" value=" " />
+		</form>
+	</div>
+</div>

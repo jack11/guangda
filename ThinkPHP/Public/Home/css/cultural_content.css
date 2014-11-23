@@ -1,0 +1,44 @@
+#content{min-height:300px;height:0;}
+
+#left{width:245px;float: left;}
+.list_header{height:32px;line-height:28px;color: #ffffff;font-size: 14px;font-family: 'Microsoft Yahei';text-align: center;line-height: 28px;background-image: url(../images/bg_title.png);}
+.msg_list{border-left:5px solid #EEEEEE;border-bottom:3px solid #EEEEEE;border-right:3px solid #EEEEEE;}
+.msg_list li {margin-top:2px;padding-left: 26px;line-height:32px;color: #605858;height: 32px;font-weight:800;display: block;overflow: hidden;background: #f7f7f7;border-bottom:1px solid #EEEEEE;}
+.msg_list li:hover{background-color: white;color: #9768AC;}
+.msg_list a{width:170px; color: #333;display: block;float: left;overflow: hidden;}
+.msg_list a:hover{color: #9768AC;}
+.msg_list span{float: right;width: 64px;}
+.msg_list .curr_title{background-color: white;/*border-top: 1px solid #EEEEEE;*/}
+.msg_list .curr_title a{color: #9768AC;}
+
+#right{width:735px;background: #F7F7F7;float: right;border-bottom: 1px solid #EEEEEE;}
+.right_title {width: 720px;height: 32px;background-color:#CFCFCF;line-height: 32px;color: #000;font-size: 12px;padding-left: 15px;}
+.right_content {width: 727px;background: #EFEDF0;border-left: 5px solid #EEEEEE;border-bottom: 5px solid #EEEEEE;border-right: 3px solid #EEEEEE;}
+.cultural_title{width: 697px;height: 80px;line-height:50px;padding:20px 20px 0 20px;font-size: 24px;font-family: 'Microsoft Yahei';text-align: center;}
+.cultural_img{width:675px;height:370px;border: 1px solid white;margin:0 25px;}
+.cultural_img ul{width: 565px;float:left;margin: 0 auto;}
+.cultural_img li{display: none;}
+.cultural_img img{width: 565px;height: 360px;padding: 5px 0;border: none;}
+.cultural_img .btn_left,.cultural_img .btn_right{width: 50px;height:360px;margin-top: 5px;text-indent: 9999px;border: none;}
+.cultural_img .btn_left{float: left;margin-left: 5px;background: url(images/cbl_tm.png);}
+.cultural_img .btn_right{float: right;margin-right: 5px;background: url(images/cbr_tm.png);}
+.cultural_img .btn_left:hover{background-color:#EDEDED; background: url(images/cbl.png);}
+.cultural_img .btn_right:hover{background-color:#EDEDED;background: url(images/cbr.png);}
+.cultural_img .active{display: block;}
+.cultural_content{clear:both;width: 697px;line-height: 26px;padding:10px 25px;color: #676767;text-indent: 2em;font-size: 14px;font-family: 'Microsoft Yahei';}
+
+.breadcrumbs li{float:left;height:32px;line-height: 32px;}
+.breadcrumbs li span{margin-left:5px;float:left;}
+.breadcrumbs a{color:#696969;font-family:'Microsoft Yahei';font-size:14px;font-weight:bold;margin-left:5px;float:left;}
+.breadcrumbs a:hover{color:#9768AC;text-decoration:none;}
+
+#pager{height:34px;border: 1px solid #EEEEEE;float: right;background-color: #F5F5F5;}
+#pager .all_page{height:34px;line-height:34px;padding:0 12px;float:left;border: 1px solid #EEEEEE;}
+#pager .to_page{height:34px;line-height:34px;float:right;}
+#pager .to_page input{width:51px;height:33px;line-height:34px;border: 1px solid #EEEEEE;}
+#pager .to_page a{float: right;}
+#pager ul{float: left;}
+#pager ul li{float: left;border: 1px solid #EEEEEE;}
+#pager a{height: 34px;line-height:34px;padding:0 12px;display: block;color: black;}
+#pager a:hover{background-color: white;color: #9768AC;}
+#pager ul li .active{background-color: white;color: #9768AC;}

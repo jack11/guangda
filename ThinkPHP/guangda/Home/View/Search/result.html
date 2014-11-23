@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<title>具体内容</title>
+	<meta charset="utf-8" />
+	<meta name="author" />
+	<meta name="keyword" />
+	<meta name="description" />
+	<link rel="stylesheet" type="text/css" href="_CSS_/common.css">
+	<style>
+		
+	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</head>
+<body>
+	<include file="Common/header" />
+	<div id="content">
+		<if condition="$list">
+		<ul>
+		<foreach name="list" item="v">
+			<li><a href="{:U("Message/content?c=$v[category_id]&id=$v[id]")}">{$v.title}</a><br>{$v.content}<br />{$v.uptime|date="Y-m-d",###}</li>
+		</foreach>
+		</ul>
+		<else />
+		没有搜索到结果
+		</if>
+	</div>
+
+	<div class="barrier"> </div>
+	<include file="Common/footer" />
+
+</body>
+
