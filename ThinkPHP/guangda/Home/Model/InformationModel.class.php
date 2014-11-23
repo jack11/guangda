@@ -28,7 +28,6 @@ class InformationModel extends MyModel{
 		$where['category_id'] = $cate_id;
 		return $this->where($where)->find();
 	}
-<<<<<<< HEAD
 	
 	/**
 	 * 根据关键字找文张
@@ -52,5 +51,5 @@ class InformationModel extends MyModel{
 		$data['count'] = $this->where($like)->count();
 		return $data;
 	}
->>>>>>> 23218f5d3f889142247787cb537e1da9e72410b5
+
 }
