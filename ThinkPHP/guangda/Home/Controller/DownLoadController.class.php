@@ -10,7 +10,6 @@ class DownLoadController extends BaseController {
 		$nav = $this->category->getPosition($this->category_id);
 		$this->findCurrTitle($tree[0]['name']);
 		
-		
 		//新闻列表
 		$down = D('DownLoad');
 		$page = $this->getInt('get.p',1);

@@ -50,6 +50,3 @@ div{/*border: 1px solid black;*/}
 .down_sign{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent;}
 .row{clear:both;width: 1000px;}
 .keyword{color: gray;}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;background-color: transparent;}
-button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{cursor:pointer;color:#fff;background-color:#9768AC;}
-input[type="text"],button,html input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;border:solid 1px #ddd;padding: 0 0 0 8px;}
