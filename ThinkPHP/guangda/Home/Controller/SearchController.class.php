@@ -10,9 +10,14 @@ class SearchController extends BaseController {
 		}
 		$info = D('Information');
 		$list = $info->getArticleByWord($keyword);
+		if($list){
+			$p = new \Think\Page();
+			$list['pageCode'] = $p->setPageSize(8)->setSign('p')->getCode($list['count'], $size);
+		}
 		
 		$this->assign('first_title',$this->first_titles);
-		$this->assign('list',$list);
+		$this->assign('list',$list['list']);
+		$this->assign('pageCode',$list['pageCode']);
 		$this->display('Search/result');
 	}
 	

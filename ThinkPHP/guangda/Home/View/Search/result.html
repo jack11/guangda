@@ -22,6 +22,7 @@
 		<foreach name="list" item="v">
 			<li><a href="{:U("Message/content?c=$v[category_id]&id=$v[id]")}">{$v.title}</a><br>{$v.content}<br />{$v.uptime|date="Y-m-d",###}</li>
 		</foreach>
+		{$pageCode}
 		</ul>
 		<else />
 		没有搜索到结果

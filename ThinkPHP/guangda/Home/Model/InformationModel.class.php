@@ -34,7 +34,7 @@ class InformationModel extends MyModel{
 	 * @param mixed word array or string 关键字
 	 * @return mixed array or false
 	 */
-	public function getArticleByWord($words){$words = array('一','标题');
+	public function getArticleByWord($words){
 		if(!is_array($words)){
 			$like['title'] = array('like',"%{$words}%");
 			$like['content'] = array('like',"%{$words}%");
@@ -47,6 +47,8 @@ class InformationModel extends MyModel{
 			$like['content'] = array('like',$arr,'or');
 		}
 		$like['_logic'] = 'OR';
-		return $this->where($like)->select();
+		$data['list'] = $this->where($like)->select();
+		$data['count'] = $this->where($like)->count();
+		return $data;
 	}
 }
