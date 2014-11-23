@@ -1,0 +1,37 @@
+/*主题内容*/
+.cbody_title{background-color: #F9F9F9;}
+.cbody_title ul{height: 40px;margin: 0;padding: 0;list-style-type: none;font-family: 'Microsoft Yahei';}
+.cbody_title li{height:40px;float: left;margin:0 5px;}
+.cbody_title a{height:30px;line-height:30px;text-decoration: none;display: block;float: right;padding: 0 5px;margin: 3px;}
+.cbody_title input{height: 22px;width: 200px;margin-right:3px;margin-top:9px;border: 1px solid #DBDBDB; }
+.cbody_title a span{width: 25px;height: 25px;display: block;float: left;margin-top: 3px;margin-right:2px; }
+.cbody_title a:hover{background-color: #F0F0F0;border: 1px solid #E5E3E3;}
+.add_icon{background:url(../images/admin_icon.png) -14px -55px;}
+.delete_icon{background:url(../images/admin_icon.png) -46px -55px;}
+.update_icon{background:url(../images/admin_icon.png) -109px -55px;}
+.search_icon{background:url(../images/admin_icon.png) -236px -124px;}
+.see_icon{background:url(../images/admin_icon.png) -14px -21px;}
+.cbody_content{font-family: 'Microsoft Yahei';font-size: 14px;}
+.cbody_content table{margin: 10px 10px 10px 25px;border: 1px solid #DBDBDB;border-collapse: collapse;}
+/*.cbody_content table tr td:nth-child(3){width: 280px;overflow: hidden;}*/
+/*.cbody_content table tr{background-color: expression(this.sectionRowIndex == 0 ? "#FFCCCC" : ((this.sectionRowIndex % 2 == 0) ? "#FFF0F0" : "#F0F0FF"));}*/
+.cbody_content td,th{padding: 7px 20px;text-align: center;border: 1px solid #DBDBDB;}
+.cbody_content td span{width: 25px;height: 25px;display: block;float: left;}
+.cbody_content td a{width: 25px;height: 25px;display: block;float: left;margin-right:8px;}
+.cbody_content td a:hover{top:1px;left: 1px;position: relative;}
+.title_width{width: 280px;}
+
+.cbody .error {background:#ffdede url(../images/sprite.png) no-repeat 17px -712px;color:#be0000;}
+.cbody .warning {color:#dc6200;background:#fff6de url(../images/sprite.png) no-repeat 18px -975px;}
+.cbody .succes {color:#3f5a04;background:#dfedc0 url(../images/sprite.png) no-repeat 15px -841px;}
+
+#pager{margin-top:0px;height:34px;border: 1px solid #EEEEEE;float: right;background-color: #F5F5F5;}
+#pager .all_page{height:34px;line-height:34px;padding:0 12px;float:left;border: 1px solid #EEEEEE;color: black;}
+#pager .to_page{height:34px;line-height:34px;float:right;}
+#pager .to_page input{width:51px;height:33px;line-height:34px;border: 1px solid #EEEEEE;}
+#pager .to_page a{float: right;}
+#pager ul{float: left;list-style-type: none;margin: 0;padding: 0px;}
+#pager ul li{float: left;border: 1px solid #EEEEEE;}
+#pager a{height: 34px;line-height:34px;padding:0 12px;display: block;color: black;text-decoration: none;}
+#pager a:hover{background-color: white;color: #9768AC;}
+#pager ul li .active{background-color: white;color: #9768AC;}

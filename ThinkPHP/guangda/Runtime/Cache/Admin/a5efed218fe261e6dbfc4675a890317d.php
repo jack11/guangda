@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit(); if(C('LAYOUT_ON')) { echo ''; } ?>
-<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<title>404</title>
@@ -7,8 +7,8 @@
 	<meta name="author" />
 	<meta name="keyword" />
 	<meta name="description" />
-	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Admin/Css/common.css">
-	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/common.css">
+	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
 	<style>
 		#content{min-height:300px;height:0;text-align:center;}
 	</style>

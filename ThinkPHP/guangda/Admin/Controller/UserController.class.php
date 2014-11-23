@@ -33,5 +33,10 @@ class UserController extends BaseController {
 		$this->success('退出成功',U('index/index'));
 	}
 	
+	public function bb()
+	{
+		$this->display();
+	}
+	
 	
 }
