@@ -38,7 +38,7 @@
   <form class="form" method='POST' action='<?php echo U("user/login");?>'>
 		账号:<input type='text' name='user' class="input"><br>
 		密码:<input type='password' name='password' class="input"><br>
-		验证码:<input type='text' name='password' class="input"><br>
+		验证码:<input type='text' name='password' class="code"><br>
 		<span class="error"></span>
 		<input type='button' name='sub' value='登陆'>
 	</form>

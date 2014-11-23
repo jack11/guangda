@@ -28,4 +28,28 @@ class InformationModel extends MyModel{
 		$where['category_id'] = $cate_id;
 		return $this->where($where)->find();
 	}
+	
+	/**
+	 * 根据关键字找文张
+	 * @param mixed word array or string 关键字
+	 * @return mixed array or false
+	 */
+	public function getArticleByWord($words){
+		if(!is_array($words)){
+			$like['title'] = array('like',"%{$words}%");
+			$like['content'] = array('like',"%{$words}%");
+		}else{
+			$arr = array();
+			foreach($words as $word){
+				$arr[] = "%{$word}%";
+			}
+			$like['title'] = array('like',$arr,'or');
+			$like['content'] = array('like',$arr,'or');
+		}
+		$like['_logic'] = 'OR';
+		$data['list'] = $this->where($like)->select();
+		$data['count'] = $this->where($like)->count();
+		return $data;
+	}
+
 }

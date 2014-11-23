@@ -59,6 +59,7 @@
 	<div id="content">
 		<?php if($list): ?><ul>
 		<?php if(is_array($list)): foreach($list as $key=>$v): ?><li><a href="<?php echo U("Message/content?c=$v[category_id]&id=$v[id]");?>"><?php echo ($v["title"]); ?></a><br><?php echo ($v["content"]); ?><br /><?php echo (date("Y-m-d",$v["uptime"])); ?></li><?php endforeach; endif; ?>
+		<?php echo ($pageCode); ?>
 		</ul>
 		<?php else: ?>
 		没有搜索到结果<?php endif; ?>
