@@ -54,7 +54,7 @@ class BaseController extends Controller {
 	}
 	
 	protected function getString($name,$default=''){
-		return I($name,$default,'string');
+		return I($name,$default,'String');
 	}
 	
 	protected function getInt($name,$default=0){

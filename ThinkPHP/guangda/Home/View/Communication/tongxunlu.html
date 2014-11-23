@@ -10,7 +10,17 @@
 	<link rel="stylesheet" type="text/css" href="_CSS_/communication.css">
 	<script type="text/javascript" src="_JS_/jquery.js"></script>
 	<script type="text/javascript" src="_JS_/index.js"></script>
-
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".right_content tr:odd").css({background: "#F7F7F7"}); // 1, 3 行
+			console.info($(".right_content tr:odd td"));
+			$(".right_content tr:odd td").mouseover(function() {
+			  	$(this).css({background: "#ffffff",cursor:"pointer"});
+			}).mouseout(function(){
+				$(this).css({background: "#F7F7F7"});
+			});
+		});
+	</script>
 </head>
 <body>
 	<include file="Common/header" />
