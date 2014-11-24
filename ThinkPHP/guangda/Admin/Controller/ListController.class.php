@@ -30,6 +30,11 @@ class ListController extends BaseController {
         $this->display('Common/list');
 	}
 	
+	public function whfc(){
+		$this->assign('temp','文化风采');
+        $this->display('Common/list');
+	}
+	
 	public function sline(){
 		$slid = $this->getString("id");
 		$temp = '';

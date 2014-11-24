@@ -6,11 +6,11 @@
 		<meta name="author" />
 		<meta name="keyword" />
 		<meta name="description" />
-		<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Home/css/common.css">
-		<!-- <link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Home/css/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Home/css/common.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Home/css/style.css"> -->
 
-		<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Home/js/jquery.js"></script>
-		<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Home/js/index.js"></script>
+		<script type="text/javascript" src="/guangda/ThinkPHP/Public/Home/js/jquery.js"></script>
+		<script type="text/javascript" src="/guangda/ThinkPHP/Public/Home/js/index.js"></script>
 
 		<style>
 			#content{min-height:300px;height:0;}
@@ -24,7 +24,7 @@
 			.search_bar{float: left;line-height:33px;font-size:15px;font-weight:bold;padding-top:5px;}
 			.search form{width: 300px;height: 33px;margin-top: 3px;border: 1px solid #dadada;line-height: 30px;float: left;}
 			.search input[type=text]{height:33px;}
-			.submit{background: url(/pro/guangda/ThinkPHP/Public/Home/images/search_bg.png);width: 28px;height: 28px;border: none;}
+			.submit{background: url(/guangda/ThinkPHP/Public/Home/images/search_bg.png);width: 28px;height: 28px;border: none;}
 			.keyword,.key{width:252px;height:33px;border: none;line-height:33px;}
 			.hot_word{padding-left:50px;}
 			.hot_word span{margin-left:5px;color:#369}
@@ -50,13 +50,18 @@
 			#pager a:hover{background-color: white;color: #9768AC;}
 			#pager ul li .active{background-color: white;color: #9768AC;}
 		</style>
+		<script>
+			$("#left").ready(function(){
+				
+			})
+		</script>
 	</head>
 	<body>
 		<div id="header">
 	<div id="banner"></div>
 	<div id="nav">
 		<ul class="nav_bar">
-			<li ><a class="<?php echo ($first_title[0]['class']); ?>" href="/pro/guangda/ThinkPHP">首页</a></li>
+			<li ><a class="<?php echo ($first_title[0]['class']); ?>" href="/guangda/ThinkPHP">首页</a></li>
 			<li ><a href="<?php echo U('Message/index?c=3');?>" class="<?php echo ($first_title[1]['class']); ?>">行内通知 </a>
 				<ul class="li_bar">
 					<li ><a href="<?php echo U('Message/index?c=23');?>">综合信息</a></li>
@@ -96,6 +101,7 @@
 		<div id="content">
 			<div id="left">
 				<ul class="tabs">
+					<input type="hidden" value="<?php echo ($data["time"]); ?>"id="time_hidden">
 					<li class="current">
 						<em>› </em>全部时间
 					</li>
@@ -113,6 +119,7 @@
 					</li>
 				</ul>
 				<ul class="tabs">
+					<input type="hidden" value="<?php echo ($data["type"]); ?>"id="type_hidden">
 					<li class="current">
 						<em>› </em>标题和全文
 					</li>
@@ -124,6 +131,7 @@
 					</li>
 				</ul>
 				<ul class="tabs">
+					<input type="hidden" value="<?php echo ($data["order"]); ?>"id="order_hidden">
 					<li class="current">
 						<em>› </em>按相关度排序
 					</li>
@@ -239,13 +247,13 @@
       	<li><a href="http://10.5.88.7" target="_blank">广州分行</a>|</li>
       	<li><a href="http://www.cebbank.com" target="_blank">总行</a>|</li>
       	<li><a target="_blank">IAM系统</a>|</li>
-      	<li><a href="/pro/guangda/ThinkPHP/Admin/" target="_blank">管理员</a>|</li>
+      	<li><a href="/guangda/ThinkPHP/Admin/" target="_blank">管理员</a>|</li>
 	</ul></div>
 	<div class="copyright">中国光大银行湛江分行版权所有</div>
 	<div class="copyright">地址：广东省湛江市赤坎区人民大道北45号丽晶大厦</div>
 	<div class="auth_logo">
-		<img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行">
+		<img src="/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行">
 	</div>
 </div>
-
+	
 	</body>
