@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="_CSS_/index.css">
 	<link rel="stylesheet" type="text/css" href="_CSS_/list.css">
 	<script type="text/javascript" src="_JS_/jquery.js"></script>
-	<script type="text/javascript" src="_JS_/admin.js"></script>
+	<script type="text/javascript" src="_JS_/Common.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$.ajax(
@@ -31,6 +31,14 @@
 					  }
 					}
 				);
+				var title = "后台";
+				if($("ul",this).length > 0 ){
+					title = $("ul a:first",this).html();
+				}else{
+					title = $("span:first",this).html();
+				}
+				$(".banner").html(title + "管理");
+				$("#ban_url").val(furl);
 			});
 			$(".tab>li").click(function(event){
 				$("a",this).addClass("liactive");
@@ -43,9 +51,11 @@
 					  }
 					}
 				);
+				var title = $("a",this).html();
+				$(".banner").html(title + "管理");
+				$("#ban_url").val(surl);
 				event.stopPropagation()
 			});
-			console.info($(".cbody_title a"));
 		});
 	</script>
 </head>
@@ -55,6 +65,7 @@
 			<div class="cright">
 				<div class="controls">
 					<span class="banner">后台管理</span>
+					<input type="hidden" id="ban_url" value="{:U('List/mul')}" />
 					<!-- 用户信息 -->
 					<div class="user-box">
 					</div>
