@@ -7,15 +7,21 @@
 	<meta name="keyword" />
 	<meta name="description" />
 	<link rel="stylesheet" type="text/css" href="_CSS_/index.css">
+	<link rel="stylesheet" type="text/css" href="_CSS_/list.css">
 	<script type="text/javascript" src="_JS_/jquery.js"></script>
 	<script type="text/javascript" src="_JS_/admin.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			console.info($(".buttons>li[furl]"));
+			$.ajax(
+				{ url: "{:U('List/mul')}",
+				  success: function(r){
+					$(".cbody").html(r);
+				  }
+				}
+			);
 			$(".buttons li[furl]").click(function(){
 				$(this).addClass("active").siblings().removeClass("active");
 				$("ul",this).show("slow").find("a:first").addClass("liactive");
-				console.info($("ul",this).find("a:not(:first)").removeClass("liactive"));
 				$(this).siblings().find("ul").hide("slow");
 				var furl = $(this).attr("furl");
 				$.ajax(
@@ -25,15 +31,21 @@
 					  }
 					}
 				);
-				$("#cbody").attr("src",furl);
 			});
 			$(".tab>li").click(function(event){
 				$("a",this).addClass("liactive");
 				$(this).siblings().find("a").removeClass("liactive");
-				var url = $("a",this).attr("url");
-				$("#cbody").attr("src",url);
+				var surl = $("a",this).attr("url");
+				$.ajax(
+					{ url: surl,
+					  success: function(r){
+    					$(".cbody").html(r);
+					  }
+					}
+				);
 				event.stopPropagation()
 			});
+			console.info($(".cbody_title a"));
 		});
 	</script>
 </head>
@@ -72,44 +84,44 @@
 						<li><a url="{:U('List/bran_iss')}">分行发文</a></li>
 					</ul>
 				</li>
-				<li furl="List/xz1">
+				<li furl="{:U('Download/xz_word')}">
 					<a class="btn ico3"><span>下载专区</span>下载专区</a>
 					<span class="tooltip"><span>下载专区</span></span>
 					<ul class="tab">
-						<li><a url="List/xz1" class="liactive">资料下载</a></li>
-						<li><a url="List/xz2">软件下载</a></li>
+						<li><a url="{:U('Download/xz_word')}" class="liactive">资料下载</a></li>
+						<li><a url="{:U('Download/xz_soft')}">软件下载</a></li>
 					</ul>
 				</li>
-				<li furl="List/txl">
+				<li furl="{:U('Communication/txl')}">
 					<a class="btn ico4"><span>通讯录</span>通讯录</a>
 					<span class="tooltip"><span>通讯录</span></span>
 				</li>
-				<li furl="List/whfc">
+				<li furl="{:U('Cultural/whfc')}">
 					<a class="btn ico5"><span>文化风采</span>文化风采</a>
 					<span class="tooltip"><span>文化风采</span></span>
 				</li>
-				<li furl="{:U('List/sline?id/1')}">
+				<li furl="{:U('List/sline?id=1')}">
 					<a class="btn ico6"><span>条线管理</span>条线管理</a>
 					<span class="tooltip"><span>条线管理</span></span>
 					<ul class="tab">
-						<li><a url="{:U('List/sline?id/1')}" class="liactive">对公条线</a></li>
-						<li><a url="{:U('List/sline?id/2')}">零售条线</a></li>
-						<li><a url="{:U('List/sline?id/3')}">运营条线</a></li>
-						<li><a url="{:U('List/sline?id/4')}">风险条线</a></li>
+						<li><a url="{:U('List/sline?id=1')}" class="liactive">对公条线</a></li>
+						<li><a url="{:U('List/sline?id=2')}">零售条线</a></li>
+						<li><a url="{:U('List/sline?id=3')}">运营条线</a></li>
+						<li><a url="{:U('List/sline?id=4')}">风险条线</a></li>
 					</ul>
 				</li>
-				<li furl="{:U('List/depart?id/1')}">
+				<li furl="{:U('List/depart?id=1')}">
 					<a class="btn ico7"><span>部门管理</span>部门管理</a>
 					<span class="tooltip"><span>部门管理</span></span>
 					<ul class="tab">
-						<li><a url="{:U('List/depart?id/1')}" class="liactive">公司业务部</a></li>
-						<li><a url="{:U('List/depart?id/2')}">零售业务部</a></li>
-						<li><a url="{:U('List/depart?id/3')}">办公室</a></li>
-						<li><a url="{:U('List/depart?id/4')}">计划财务部</a></li>
-						<li><a url="{:U('List/depart?id/5')}">风险管理部</a></li>
-						<li><a url="{:U('List/depart?id/6')}">营业部</a></li>
-						<li><a url="{:U('List/depart?id/7')}">业务一部</a></li>
-						<li><a url="{:U('List/depart?id/8')}">业务二部</a></li>
+						<li><a url="{:U('List/depart?id=1')}" class="liactive">公司业务部</a></li>
+						<li><a url="{:U('List/depart?id=2')}">零售业务部</a></li>
+						<li><a url="{:U('List/depart?id=3')}">办公室</a></li>
+						<li><a url="{:U('List/depart?id=4')}">计划财务部</a></li>
+						<li><a url="{:U('List/depart?id=5')}">风险管理部</a></li>
+						<li><a url="{:U('List/depart?id=6')}">营业部</a></li>
+						<li><a url="{:U('List/depart?id=7')}">业务一部</a></li>
+						<li><a url="{:U('List/depart?id=8')}">业务二部</a></li>
 					</ul>
 				</li>
 			</ul>
