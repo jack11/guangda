@@ -34,7 +34,7 @@ div{/*border: 1px solid black;*/}
 .footermenu li{ float:left;padding-left:10px;display:inline;left:-50%;position:relative;}
 .footermenu li a{ color:#d2d1d1; padding:0 6px 0 0px; font-family:'Microsoft Yahei'; font-size:12px;}
 .copyright{	height:25px;line-height:25px;text-align:center; margin:auto}
-.auth_logo{height:60px;margin:5px auto; text-align:center;}
+.auth_logo{height:100px;margin:5px auto; text-align:center;}
 .auth_logo img{margin:0 16px;padding-top: 5px;width: 160px;}
 /*尾部菜单 end*/
 

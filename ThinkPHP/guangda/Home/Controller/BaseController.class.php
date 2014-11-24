@@ -60,6 +60,13 @@ class BaseController extends Controller {
 	protected function getInt($name,$default=0){
 		return I($name,$default,'int');
 	}
+	protected function getArray($name,$default=array()){
+		$res = I($name,$default);
+		if(!is_array($res)){
+			return array();
+		}
+		return $res;
+	}
 	
 	protected function _empty($name){
 		$this->error();

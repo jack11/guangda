@@ -12,6 +12,10 @@ class UserController extends BaseController {
 		if(!IS_POST){
 			$this->display('User/login');
 		}else{
+			$code = $this->getString('code');
+			if($code!=$this->getString('session.checkCode')){
+				$this->error('验证码错误');
+			}
 			$name = $this->getString('post.user');
 			$password = $this->getString('post.password');
 			$info = $this->user->login($name,$password);
@@ -38,5 +42,11 @@ class UserController extends BaseController {
 		$this->display();
 	}
 	
-	
+	public function code(){
+		$code = new \Tools\CheckCode();
+		$code->setFont('./ttfs/2.ttf')->setModel(4)->setWidth(120)->setHeight(40)->setPixel(200)->setLine(8)->setSize(4)->getImg();
+
+	}
+
+
 }

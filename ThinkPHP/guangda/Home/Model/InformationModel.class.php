@@ -58,15 +58,12 @@ class InformationModel extends MyModel{
 	 * @return mixed array or false
 	 */
 	 public function getArticleByParams($words,$time,$type,$order){
-		if(!is_array($words)){
-			$tmp = array('like',"%{$words}%");
-		}else{
-			$arr = array();
-			foreach($words as $word){
-				$arr[] = "%{$word}%";
-			}
-			$tmp = array('like',$arr,'or');
+		$arr = array();
+		foreach($words as $word=>$count){
+			$arr[] = "%{$word}%";
 		}
+		$tmp = array('like',$arr,'or');
+
 		switch ($type) {
 			case 1:
 				$like['title'] = $tmp;
@@ -82,7 +79,7 @@ class InformationModel extends MyModel{
 		}
 		$where['_complex'] = $like;
 		if($time!=0){
-			$where['uptime'] = time().'-uptime < '.$time;
+			$where['uptime'] = array('gt',time()-$time);
 		}
 		$order = "uptime {$order}";
 		$data['list'] = $this->where($where)->order($order)->select();
