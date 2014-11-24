@@ -54,11 +54,18 @@ class BaseController extends Controller {
 	}
 	
 	protected function getString($name,$default=''){
-		return I($name,$default,'String');
+		return I($name,$default,'string');
 	}
 	
 	protected function getInt($name,$default=0){
 		return I($name,$default,'int');
+	}
+	protected function getArray($name,$default=array()){
+		$res = I($name,$default);
+		if(!is_array($res)){
+			return array();
+		}
+		return $res;
 	}
 	
 	protected function _empty($name){

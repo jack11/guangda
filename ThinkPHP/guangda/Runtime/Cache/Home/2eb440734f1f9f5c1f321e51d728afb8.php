@@ -49,8 +49,9 @@
 		});
 	</script>
 	<div id="search_bar">
-		<form id="search_form">
-			<input type="text" name="" class="keyword" value="全文检索" /><input type="submit" value=" " />
+		<form id="search_form" method="get" action="<?php echo U("search/result");?>">
+			<input type="hidden" name="submit" value="true" />
+			<input type="text" name="keyword" class="keyword" value="全文检索" /><input type="submit" value=" " />
 		</form>
 	</div>
 </div>
@@ -113,12 +114,14 @@
       	<li><a href="http://10.5.88.7" target="_blank">广州分行</a>|</li>
       	<li><a href="http://www.cebbank.com" target="_blank">总行</a>|</li>
       	<li><a target="_blank">IAM系统</a>|</li>
-      	<li><a href="/pro/guangda/ThinkPHP/Admin/" target="_blank">管理员</a>|</li>
+      	<li><a href="/pro/guangda/ThinkPHP/Admin/" target="_blank">管理员</a></li>
 	</ul></div>
-	<div class="copyright">中国光大银行湛江分行版权所有</div>
-	<div class="copyright">地址：广东省湛江市赤坎区人民大道北45号丽晶大厦</div>
+	<div class="copyright">中国光大银行湛江分行版权所有&nbsp;&nbsp;&nbsp;&nbsp;地址：广东省湛江市赤坎区人民大道北45号丽晶大厦</div>
+
 	<div class="auth_logo">
-		<img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行">
+		<img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行" style="height:100px;width: 204px;">
+		<img src="/pro/guangda/ThinkPHP/Public/Home/images/weixin.png"  title="关注微信" style="height:100px;width: 100px;">
+		<!-- <img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行" style="height:100px;width: 160px;"> -->
 	</div>
 </div>
 

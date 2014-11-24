@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit();?><link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/iframe_common.css">
-<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/cbody.css">
-<script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
+<?php if (!defined('THINK_PATH')) exit();?><link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Admin/Css/iframe_common.css">
+<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Admin/Css/cbody.css">
+<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".cbody_content tr:odd").css({background: "#ffffff"}); // 1, 3 行

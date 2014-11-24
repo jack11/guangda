@@ -6,10 +6,10 @@
 	<meta name="author" />
 	<meta name="keyword" />
 	<meta name="description" />
-	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Home/css/common.css">
-	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Home/css/index.css">
-	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Home/js/jquery.js"></script>
-	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Home/js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Home/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Home/css/index.css">
+	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Home/js/jquery.js"></script>
+	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Home/js/index.js"></script>
 	
 </head>
 <body>
@@ -17,7 +17,7 @@
 	<div id="banner"></div>
 	<div id="nav">
 		<ul class="nav_bar">
-			<li ><a class="<?php echo ($first_title[0]['class']); ?>" href="/guangda/ThinkPHP">首页</a></li>
+			<li ><a class="<?php echo ($first_title[0]['class']); ?>" href="/pro/guangda/ThinkPHP">首页</a></li>
 			<li ><a href="<?php echo U('Message/index?c=3');?>" class="<?php echo ($first_title[1]['class']); ?>">行内通知 </a>
 				<ul class="li_bar">
 					<li ><a href="<?php echo U('Message/index?c=23');?>">综合信息</a></li>
@@ -49,8 +49,9 @@
 		});
 	</script>
 	<div id="search_bar">
-		<form id="search_form">
-			<input type="text" name="" class="keyword" value="全文检索" /><input type="submit" value=" " />
+		<form id="search_form" method="get" action="<?php echo U("search/result");?>">
+			<input type="hidden" name="submit" value="true" />
+			<input type="text" name="keyword" class="keyword" value="全文检索" /><input type="submit" value=" " />
 		</form>
 	</div>
 </div>
@@ -73,10 +74,10 @@
 			<div id="pic_msg">
 				<div class='turn_img'>
 					<ul>
-						<a href='#'><li><img src='/guangda/ThinkPHP/Public/Home/images/04.jpg' /><span class='img_title'>中国海洋学会2007年</span><div class='turn_img_bg'></div></li></a>
-						<a href='#'><li><img src='/guangda/ThinkPHP/Public/Home/images/02.jpg' /><span class='img_title'>青岛未出口鱼片上黑名单企业向美方申诉成功</span><div class='turn_img_bg'></div></li></a>
-						<a href='#'><li><img src='/guangda/ThinkPHP/Public/Home/images/03.jpg' /><span class='img_title'>我国将坚持“以养为主”打造现代水产养殖业</span><div class='turn_img_bg'></div></li></a>
-						<a href='#'><li><img src='/guangda/ThinkPHP/Public/Home/images/01.jpg' /><span class='img_title'>极度通胀下的越南渔业陷困境</span><div class='turn_img_bg'></div></li></a>
+						<a href='#'><li><img src='/pro/guangda/ThinkPHP/Public/Home/images/04.jpg' /><span class='img_title'>中国海洋学会2007年</span><div class='turn_img_bg'></div></li></a>
+						<a href='#'><li><img src='/pro/guangda/ThinkPHP/Public/Home/images/02.jpg' /><span class='img_title'>青岛未出口鱼片上黑名单企业向美方申诉成功</span><div class='turn_img_bg'></div></li></a>
+						<a href='#'><li><img src='/pro/guangda/ThinkPHP/Public/Home/images/03.jpg' /><span class='img_title'>我国将坚持“以养为主”打造现代水产养殖业</span><div class='turn_img_bg'></div></li></a>
+						<a href='#'><li><img src='/pro/guangda/ThinkPHP/Public/Home/images/01.jpg' /><span class='img_title'>极度通胀下的越南渔业陷困境</span><div class='turn_img_bg'></div></li></a>
 					</ul>
 					<ol>
 						<li class='curr'>1</li>
@@ -153,8 +154,8 @@
 			<div id="product_msg">
 				<div id="product_title" class="list_header">产品信息</div>
 				<table>
-					<tr><td><img src="/guangda/ThinkPHP/Public/Home/images/02.jpg"></td></tr>
-					<tr><td><img src="/guangda/ThinkPHP/Public/Home/images/04.jpg"></td></tr>
+					<tr><td><img src="/pro/guangda/ThinkPHP/Public/Home/images/02.jpg"></td></tr>
+					<tr><td><img src="/pro/guangda/ThinkPHP/Public/Home/images/04.jpg"></td></tr>
 				</table>
 			</div>
 			<div id="deparment" class="turn_msg">
@@ -270,12 +271,14 @@
       	<li><a href="http://10.5.88.7" target="_blank">广州分行</a>|</li>
       	<li><a href="http://www.cebbank.com" target="_blank">总行</a>|</li>
       	<li><a target="_blank">IAM系统</a>|</li>
-      	<li><a href="/guangda/ThinkPHP/Admin/" target="_blank">管理员</a>|</li>
+      	<li><a href="/pro/guangda/ThinkPHP/Admin/" target="_blank">管理员</a></li>
 	</ul></div>
-	<div class="copyright">中国光大银行湛江分行版权所有</div>
-	<div class="copyright">地址：广东省湛江市赤坎区人民大道北45号丽晶大厦</div>
+	<div class="copyright">中国光大银行湛江分行版权所有&nbsp;&nbsp;&nbsp;&nbsp;地址：广东省湛江市赤坎区人民大道北45号丽晶大厦</div>
+
 	<div class="auth_logo">
-		<img src="/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行">
+		<img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行" style="height:100px;width: 204px;">
+		<img src="/pro/guangda/ThinkPHP/Public/Home/images/weixin.png"  title="关注微信" style="height:100px;width: 100px;">
+		<!-- <img src="/pro/guangda/ThinkPHP/Public/Home/images/conn_msg.png" alt="中国光大银行" title="中国光大银行" style="height:100px;width: 160px;"> -->
 	</div>
 </div>
 </body>

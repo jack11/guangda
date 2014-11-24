@@ -34,8 +34,9 @@
 		});
 	</script>
 	<div id="search_bar">
-		<form id="search_form">
-			<input type="text" name="" class="keyword" value="全文检索" /><input type="submit" value=" " />
+		<form id="search_form" method="post" action="{:U("search/result")}">
+			<input type="hidden" name="submit" value="true" />
+			<input type="text" name="keyword" class="keyword" value="全文检索" /><input type="submit" value=" " />
 		</form>
 	</div>
 </div>

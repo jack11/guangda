@@ -7,8 +7,8 @@
 	<meta name="author" />
 	<meta name="keyword" />
 	<meta name="description" />
-	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/common.css">
-	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Admin/Css/common.css">
+	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
 	<style>
 		#content{min-height:300px;height:0;text-align:center;}
 	</style>

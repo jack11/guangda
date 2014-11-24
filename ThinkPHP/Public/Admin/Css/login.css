@@ -1,24 +1,43 @@
 .bg {
-margin-left:auto;
-margin-right:auto;
-margin-top:10%;
-width:400px;
-height:280px;
-background-image:url(../images/login.png);
-background-repeat:no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	width: 400px;
+	height: 280px;
+	background-image: url(../images/login.png);
+	background-repeat: no-repeat;
 }
 
 .form {
-position:relative;
-top:120px;
-left:85px;
-line-height:30px;
-width: 250px;
+	position: relative;
+	top: 100px;
+	left: 65px;
+	line-height: 30px;
+	width: 250px;
 }
 
 .input {
-width:160px;
+	width: 160px;
 }
-.code{}
-.error{color: red;}
+.code {
+	position: relative;
+	top: 5px;
+	left: 0px;
+}
+.code input {
+	width: 60px;
+}
+.code_img {
+	position: relative;
+	top: -30px;
+	left: 140px;
+}
+.sub {
+	position: relative;
+	top: -28px;
+	left: 30px;
+}
+.error {
+	color: red;
+}
 

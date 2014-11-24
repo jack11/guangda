@@ -6,9 +6,9 @@
 	<meta name="author" />
 	<meta name="keyword" />
 	<meta name="description" />
-	<link rel="stylesheet" type="text/css" href="/guangda/ThinkPHP/Public/Admin/Css/index.css">
-	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
-	<script type="text/javascript" src="/guangda/ThinkPHP/Public/Admin/Js/admin.js"></script>
+	<link rel="stylesheet" type="text/css" href="/pro/guangda/ThinkPHP/Public/Admin/Css/index.css">
+	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Admin/Js/jquery.js"></script>
+	<script type="text/javascript" src="/pro/guangda/ThinkPHP/Public/Admin/Js/admin.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			console.info($(".buttons>li[furl]"));

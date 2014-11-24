@@ -30,7 +30,7 @@ class InformationModel extends MyModel{
 	}
 	
 	/**
-	 * 根据关键字找文张
+	 * 根据关键字找文章
 	 * @param mixed word array or string 关键字
 	 * @return mixed array or false
 	 */
@@ -49,6 +49,41 @@ class InformationModel extends MyModel{
 		$like['_logic'] = 'OR';
 		$data['list'] = $this->where($like)->select();
 		$data['count'] = $this->where($like)->count();
+		return $data;
+	}
+	
+	/**
+	 * 根据找文章
+	 * @param mixed word array or string 关键字
+	 * @return mixed array or false
+	 */
+	 public function getArticleByParams($words,$time,$type,$order){
+		$arr = array();
+		foreach($words as $word=>$count){
+			$arr[] = "%{$word}%";
+		}
+		$tmp = array('like',$arr,'or');
+
+		switch ($type) {
+			case 1:
+				$like['title'] = $tmp;
+				break;
+			case 2:
+				$like['content'] = $tmp;
+				break;
+			default:
+				$like['title'] = $tmp;
+				$like['content'] = $tmp;
+				$like['_logic'] = 'or';
+				break;
+		}
+		$where['_complex'] = $like;
+		if($time!=0){
+			$where['uptime'] = array('gt',time()-$time);
+		}
+		$order = "uptime {$order}";
+		$data['list'] = $this->where($where)->order($order)->select();
+		$data['count'] = $this->where($where)->count();
 		return $data;
 	}
 

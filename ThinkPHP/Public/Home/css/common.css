@@ -34,7 +34,7 @@ div{/*border: 1px solid black;*/}
 .footermenu li{ float:left;padding-left:10px;display:inline;left:-50%;position:relative;}
 .footermenu li a{ color:#d2d1d1; padding:0 6px 0 0px; font-family:'Microsoft Yahei'; font-size:12px;}
 .copyright{	height:25px;line-height:25px;text-align:center; margin:auto}
-.auth_logo{height:60px;margin:5px auto; text-align:center;}
+.auth_logo{height:100px;margin:5px auto; text-align:center;}
 .auth_logo img{margin:0 16px;padding-top: 5px;width: 160px;}
 /*尾部菜单 end*/
 
@@ -50,6 +50,3 @@ div{/*border: 1px solid black;*/}
 .down_sign{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent;}
 .row{clear:both;width: 1000px;}
 .keyword{color: gray;}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;background-color: transparent;}
-button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{cursor:pointer;color:#fff;background-color:#9768AC;}
-input[type="text"],button,html input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;border:solid 1px #ddd;padding: 0 0 0 8px;}
